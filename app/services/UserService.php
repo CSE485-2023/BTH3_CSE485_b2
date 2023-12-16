@@ -13,8 +13,15 @@ class UserService
 
     public function getAllUsers()
     {
-        $sql = "SELECT * FROM {categoryTable}";
-        $stmt = "";
+        $sql = "SELECT * FROM ".userTable;
+        $stmt = $this->conn->query($sql); // Sử dụng đối tượng kết nối PDO trong DB_connection
+
+        $users = [];
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $user = new User($row['id'], $row['name'], $row['email'],$row['password'], $row['created_at'], $row['updated_at']);
+            $users[] = $user;
+        }
+        return $users;
     }
 
     public function login($data) {

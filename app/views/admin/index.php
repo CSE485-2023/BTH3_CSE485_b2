@@ -35,8 +35,8 @@
                                 <tbody>
                                 <?php
                                 foreach ($courses as $course) {
-                                    $created = date_create($course->getCreated());
-                                    $updated = date_create($course->getUpdated());
+                                    $created = date_create($course->getCreatedAt());
+                                    $updated = date_create($course->getUpdatedAt());
 
                                     echo '
                                                <tr>

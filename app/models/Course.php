@@ -10,10 +10,14 @@ class Course
     private $updatedAt;
 
 
-    public function __construct()
-    {
-
+    public function __construct($id= null,$title= null,$description=null,$createdAt= null,$updatedAt = null) {
+        $this->id = $id;
+        $this->title  = $title;
+        $this->description = $description;
+        $this->createdAt = $createdAt;
+        $this->updatedAt = $updatedAt;
     }
+
 
     /**
      * @return mixed

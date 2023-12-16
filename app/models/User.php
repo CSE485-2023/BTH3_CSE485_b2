@@ -11,9 +11,15 @@ class User
     private $type;
     private $deleted;
 
-    public function __construct()
+    public function __construct($id = null,$firstName = null,$lastName = null,$email = null,$password = null,$type = null,$deleted = null)
     {
-
+    $this->id = $id;
+    $this->firstName = $firstName;
+    $this->lastName = $lastName;
+    $this->email = $email;
+    $this->password = $password;
+    $this->type = $type;
+    $this->deleted = $deleted;
     }
 
 

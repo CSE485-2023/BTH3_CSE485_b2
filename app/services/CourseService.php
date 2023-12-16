@@ -18,10 +18,10 @@ class CourseService
 
         $courses = [];
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $course = new Course($row['id'], $row['title'], $row['message'], $row['name'], $row['first_name'].' '. $row['last_name'], $row['status'], $row['created'], $row['updated']);
-            $courses[] = $post;
+            $course = new Course($row['id'], $row['title'], $row['description'], $row['created_at'], $row['updated_at']);
+            $courses[] = $course;
         }
-        return $posts;
+        return $courses;
     }
 
 
