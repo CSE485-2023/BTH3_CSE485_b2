@@ -7,7 +7,7 @@
                 <div class="col-md-9">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Post Listing</h3>
+                            <h3 class="panel-title">Course Listing</h3>
                         </div>
                         <div class="panel-body">
                             <div class="panel-heading">
@@ -16,7 +16,7 @@
                                         <h3 class="panel-title"></h3>
                                     </div>
                                     <div class="col-md-2" align="right">
-                                        <a href="compose_post.php"
+                                        <a href="index.php?c=course&a=create"
                                            class="btn btn-default btn-xs">Add New</a>
                                     </div>
                                 </div>

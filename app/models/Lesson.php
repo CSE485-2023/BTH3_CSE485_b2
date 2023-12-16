@@ -1,17 +1,17 @@
 <?php
 
 
-class User
+class Lesson
 {
     private $id;
-    private $name;
-    private $email;
-    private $password;
+    private $course_id;
+    private $title;
+    private $description;
+    private $creadedAt;
+    private $type;
+    private $deleted;
 
-    private $createdAt;
-    private $updatedAt;
-
-    public function __construct($id = null,$name = null,$email = null,$password = null,$created = null,$deleted = null)
+    public function __construct($id = null,$firstName = null,$lastName = null,$email = null,$password = null,$type = null,$deleted = null)
     {
     $this->id = $id;
     $this->firstName = $firstName;

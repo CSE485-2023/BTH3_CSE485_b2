@@ -24,6 +24,12 @@ class CourseService
         return $courses;
     }
 
+    public function save($title,$description) {
+        $sql = "INSERT INTO courses(title,description) VALUES ('$title','$description')";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+    }
+
 
     public function totalCourse() {
         $sql = "SELECT COUNT(*) FROM ".courseTable;
